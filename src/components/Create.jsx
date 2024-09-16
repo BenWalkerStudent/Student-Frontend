@@ -36,13 +36,13 @@ export default function Create() {
       return;
     });
 
-    setForm({
-      firstName: "",
-      lastName: "",
-      email: "",
-      age: "",
-      currentCollege: "",
-    });
+    // setForm({
+    //   firstName: "",
+    //   lastName: "",
+    //   email: "",
+    //   age: "",
+    //   currentCollege: "",
+    // });
     navigate("/");
   }
 

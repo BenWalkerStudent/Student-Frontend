@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+a.btn {
+  color: rgb(241, 241, 241);
+  background-color: rgb(56, 56, 56);
+  width: 50px;
+}
+
+button.btn:hover {
+  color: red;
+}
+
+tr {
+  border: #000000 3px;
+}

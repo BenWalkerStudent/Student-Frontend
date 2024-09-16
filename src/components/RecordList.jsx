@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "./Loader/Loader";
+import "./components.css";
 
 const Record = (props) => (
   <tr>
@@ -52,7 +53,9 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`http://localhost:3001/students/${id}`);
+    await fetch(`http://localhost:3001/students/${id}`, {
+      method: "Delete",
+    });
 
     const newRecords = records.filter((el) => el._id !== id);
     setRecords(newRecords);
@@ -88,7 +91,7 @@ export default function RecordList() {
         </thead>
         {loading ? <Loader /> : recordList()}
 
-        <tbody>{recordList()}</tbody>
+        {/* <tbody>{recordList()}</tbody> */}
       </table>
     </div>
   );

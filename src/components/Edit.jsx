@@ -61,8 +61,8 @@ export default function Edit() {
     };
 
     // This will send a post request to update the data in the database.
-    await fetch(`http://localhost:3001/students/${params.id}`, {
-      method: "PUT",
+    await fetch(`http://localhost:3001/students/${params.id.toString()}`, {
+      method: "PATCH",
       body: JSON.stringify(editedPerson),
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ export default function Edit() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="age">Music Genre</label>
+          <label htmlFor="age">Age</label>
           <input
             type="text"
             className="form-control"
